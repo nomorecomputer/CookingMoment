@@ -2,65 +2,186 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <script type="module" crossorigin src="/CookingMoment/assets/index-C7zRY0WY.js"></script>
-    <link rel="modulepreload" crossorigin href="/CookingMoment/assets/main-i6qvG5Ce.js">
-    <link rel="stylesheet" crossorigin href="/CookingMoment/assets/main-srDv6dSX.css">
+    <title>Document</title>
+    <script type="module" crossorigin src="/CookingMoment/assets/main-DcE68ZNr.js"></script>
+    <link rel="stylesheet" crossorigin href="/CookingMoment/assets/main-BV5QmCpj.css">
   </head>
   <body>
-    <div class="m-2">
-      <h2>測試icon</h2>
-      <p>
-        cart<span class="icon-cart"></span><br />
-        menu<span class="icon-menu"></span><br />
-        avatar<span class="icon-avatar"></span><br />
-        star-outline <span class="icon-star-outline"></span> <br />
-        star-solid <span class="icon-star-solid"></span> <br />
-        arrow-left-big
-        <span class="icon-arrow-left-big text-Accent"></span> <br />
-        arrow-left-small
-        <span class="icon-arrow-left-small text-Accent"></span> <br />
-        arrow-right-big
-        <span class="icon-arrow-right-big text-Accent"></span> <br />
-        arrow-right-small
-        <span class="icon-arrow-right-small text-Accent"></span> <br />
-        circle-arrow-left
-        <span class="icon-circle-arrow-left"></span> <br />
-        circle-arrow-right
-        <span class="icon-circle-arrow-right"></span> <br />
-        clock
-        <span class="icon-clock"></span> <br />
-        people
-        <span class="icon-people"></span> <br />
-        place-order
-        <span class="icon-place-order"></span> <br />
-        ellipsis
-        <span class="icon-ellipsis"></span> <br />
-      </p>
-    </div>
+    <nav class="navbar header navbar-expand-md fixed-top">
+  <div class="container position-relative">
+    <div class="d-flex w-100 align-items-center justify-content-between">
+      <!-- 左方logo -->
+      <div>
+        <a class="navbar-brand py-6 d-block d-md-none" href="#">
+          <img src="/CookingMoment/assets/logo_small-dqC3dKT1.png" alt="此食此刻Logo 小" />
+        </a>
+        <a class="navbar-brand py-md-0 d-none d-md-block" href="#">
+          <img src="/CookingMoment/assets/logo_big-CjHlcHsX.png" alt="此食此刻Logo 大" />
+        </a>
+      </div>
 
-    <div class="m-2">
-      <h2>
-        測試button <br />
-        <div class="btn btn-primary">Primary</div>
-        <div class="btn btn-secondary">Secondary</div>
-        <a href="#" class="link">餐桌故事</a> <br />
-        <div class="btn btn-normal">normal</div>
-        <div class="btn btn-mid">mid</div>
-        <br />
-        <div class="btn btn-small align-bottom">
-          <span class="icon-place-order-white me-6"></span>
-          small
+      <!-- 中間自適應的div -->
+      <div class="flex-grow-1 mx-2 d-none d-md-block">
+        <div class="">
+          <ul
+            class="list-unstyled d-flex justify-content-evenly h5 text-primary"
+          >
+            <li>產品列表</li>
+            <li>餐桌故事</li>
+            <li>品牌故事</li>
+            <li>關於我們</li>
+          </ul>
         </div>
-        <div class="btn btn-tab-primary">tab-primary</div>
-        <div class="btn btn-tab-primary-outline">tab-primary-outline</div>
-        <br />
-        <div class="rating-stars" data-rating="3"></div>
-        <div class="rating-stars" data-rating="4"></div>
-      </h2>
-    </div>
+      </div>
 
+      <!-- 右側 購物車、人像、menu漢堡按鈕 -->
+      <div class="d-flex align-items-center">
+        <!-- 購物車 -->
+        <span class="position-relative">
+          <span class="icon-cart mx-7"></span>
+          <span
+            class="position-absolute bg-Accent text-white cart-tag rounded-pill py-1 px-2"
+            id="header-order-qty"
+          >
+            2
+          </span>
+        </span>
+
+        <!-- 人像 & user alias-->
+        <div
+          class="btn mx-7 flex-row"
+          id="header-login-status"
+          data-logined="true"
+          data-bs-target="#userOffCanvas"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <div id="header-avatar">
+            <img
+              src="/CookingMoment/assets/avatar-1-cp2HwrEX.png"
+              class="avatar rounded-circle"
+              alt="user avatar"
+            />
+            <span class="fs-7 text-primary">Jenny</span>
+          </div>
+          <a
+            href="#"
+            class="Body2 text-secondary text-decoration-none"
+            id="header-toLogin"
+            >會員登入</a
+          >
+        </div>
+
+        <!-- menu 小版之下拉 功能清單 -->
+        <div class="dropdown mx-7 d-block d-md-none">
+          <button
+            class="border-0"
+            type="button"
+            id="header-menu-btn"
+            data-bs-toggle="dropdown"
+          >
+            <span class="icon-menu"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li class="dropdown-item h5 text-primary" href="">產品列表</li>
+            <li class="dropdown-item h5 text-primary" href="">餐桌故事</li>
+            <li class="dropdown-item h5 text-primary" href="">品牌故事</li>
+            <li class="dropdown-item h5 text-primary" href="">關於我們</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- user profile  offcanvas  -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="userOffCanvas"
+  aria-labelledby="offcanvasNavbarLabel"
+>
+  <div class="p-10 d-flex justify-content-end">
+    <button
+      type="button"
+      class="btn-close p-5 fs-8"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body p-7">
+    <div class="d-flex mb-5">
+      <img
+        src="/CookingMoment/assets/avatar-1-cp2HwrEX.png"
+        alt="user picture"
+        class="d-block my-2 me-2 avatar border-1"
+      />
+      <div class="mb-10">
+        <p class="fs-7 text-primary fw-bolder m-0">Jessica</p>
+        <p class="fs-7 text-secondary">jenny@gamil.com</p>
+      </div>
+    </div>
+    <div class="h5 text-primary">
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> article </span>
+        <span class="">訂單管理</span>
+      </div>
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> favorite </span>
+        <span class="">我的收藏</span>
+      </div>
+      <div class="py-4">
+        <span class="material-icons-outlined align-bottom"> settings </span>
+        <span class="">帳號設定</span>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-footer p-7">
+    <div class="h5 py-4 text-primary">
+      <a href="" class="text-decoration-none" id="user-logout">
+        <span class="material-symbols-outlined"> logout </span>
+        <spanfs-8>登出</spanfs-8>
+      </a>
+    </div>
+  </div>
+</div>
+    <div class="header-offset">
+      <br />
+      <div class="rating-stars" data-rating="0"></div>
+      <div class="rating-stars" data-rating="1"></div>
+      <div class="rating-stars" data-rating="2"></div>
+      <div class="rating-stars" data-rating="3"></div>
+      <div class="rating-stars" data-rating="4"></div>
+      <div class="rating-stars" data-rating="5"></div>
+    </div>
+    <div class="w-100 pt-18 pt-md-16 pb-8 bg-footer">
+  <div class="container pt-0 pt-md-8 d-flex flex-column align-content-center">
+    <!-- foot image 區 -->
+    <div class="d-flex justify-content-center mb-7 mb-md-20">
+      <img
+        src="/CookingMoment/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、小"
+        class="d-block d-md-none"
+      />
+      <img
+        src="/CookingMoment/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、大"
+        class="d-none d-md-block"
+      />
+    </div>
+    <!-- foot menu 區 -->
+    <div class="d-block py-4 footer-area">
+      <ul
+        class="footer-menu list-unstyled d-flex justify-content-evenly h5 text-primary"
+      >
+        <li class="mb-10 mb-md-0">客戶支援</li>
+        <li class="mb-10 mb-md-0">常見問題</li>
+        <li>聯絡我們</li>
+      </ul>
+    </div>
+    <!-- footer trad mark -->
+    <span class="Body2 text-text-grey m-auto">Copyright ©2025 此食此刻</span>
+  </div>
+</div>
   </body>
 </html>

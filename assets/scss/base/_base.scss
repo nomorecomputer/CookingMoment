@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+.Body {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.Body2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// 用於griding 可抵銷左、右col多出的left padding
+.container-with-padding {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}

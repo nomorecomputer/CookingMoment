@@ -1,0 +1,23 @@
+.heading_top_offset {
+  padding-top: 84px; //img height :60px + my 12*2
+  @include media-breakpoint-up(md) {
+    padding-top: 80px;
+  }
+}
+.index_banner {
+  background-image: url("/assets/images/homepage/banner1_large.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 692px;
+  @include media-breakpoint-up(md) {
+    min-height: 729px;
+  }
+}
+
+.index_banner_text {
+  margin-top: 392px;
+  @include media-breakpoint-up(md) {
+    margin-top: 273px;
+  }
+}

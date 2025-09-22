@@ -4,60 +4,166 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
     <title>index</title>
-    <script type="module" crossorigin src="/CookingMoment/assets/main-Br1xG_ll.js"></script>
-    <link rel="stylesheet" crossorigin href="/CookingMoment/assets/main-BV5QmCpj.css">
+    <script type="module" crossorigin src="/CookingMoment/assets/main-DPef6aai.js"></script>
+    <link rel="stylesheet" crossorigin href="/CookingMoment/assets/main-Bvw_b-tA.css">
   </head>
   <body>
-    <div class="m-2">
-      <h2>測試icon</h2>
-      <p>
-        cart<span class="icon-cart"></span><br />
-        menu<span class="icon-menu"></span><br />
-        avatar<span class="icon-avatar"></span><br />
-        star-outline <span class="icon-star-outline"></span> <br />
-        star-solid <span class="icon-star-solid"></span> <br />
-        arrow-left-big
-        <span class="icon-arrow-left-big text-Accent"></span> <br />
-        arrow-left-small
-        <span class="icon-arrow-left-small text-Accent"></span> <br />
-        arrow-right-big
-        <span class="icon-arrow-right-big text-Accent"></span> <br />
-        arrow-right-small
-        <span class="icon-arrow-right-small text-Accent"></span> <br />
-        circle-arrow-left
-        <span class="icon-circle-arrow-left"></span> <br />
-        circle-arrow-right
-        <span class="icon-circle-arrow-right"></span> <br />
-        clock
-        <span class="icon-clock"></span> <br />
-        people
-        <span class="icon-people"></span> <br />
-        place-order
-        <span class="icon-place-order"></span> <br />
-        ellipsis
-        <span class="icon-ellipsis"></span> <br />
-      </p>
+    <div class="m-16">
+      <div class="h2">測試color</div>
+      <div class="d-flex flex-row flex-wrap">
+        <div class="me-10">
+          primary
+          <div class="bg-primary box"></div>
+        </div>
+        <div class="me-10">
+          Accent
+          <div class="bg-Accent box"></div>
+        </div>
+        <div class="me-10">
+          secondary
+          <div class="bg-secondary box"></div>
+        </div>
+        <div class="me-10">
+          footer
+          <div class="bg-footer box"></div>
+        </div>
+        <div class="me-10">
+          bg-card
+          <div class="bg-bg-card box"></div>
+        </div>
+        <div class="me-10">
+          star
+          <div class="bg-star box"></div>
+        </div>
+        <div class="me-10">
+          text
+          <div class="bg-text box"></div>
+        </div>
+        <div class="me-10">
+          text-grey
+          <div class="bg-text-grey box"></div>
+        </div>
+        <div class="me-10">
+          bg-grey
+          <div class="bg-bg-grey box"></div>
+        </div>
+        <div class="me-10">
+          white
+          <div class="bg-white box"></div>
+        </div>
+      </div>
+      <h5>除bg-、也可直接使用 sass變數，如 $primary、$Accent、...</h5>
+
+      <h2 class="mt-6">測試spacer</h2>
+      p-0:<span class="p-0">padding 0px</span><br />
+      p-1:<span class="p-1">padding 2px</span><br />
+      p-2:<span class="p-2">padding 4px</span><br />
+      p-4:<span class="p-4">padding 8px</span><br />
+      p-8:<span class="p-8">padding 16px</span><br />
+      p-16:<span class="p-16">padding 32px</span><br />
+      <h5>pt、 pb-、 ps-、 pe-、 mt-、 mb-、...類推套用</h5>
+      <img src="/CookingMoment/assets/spacer-Xzsjw6Y6.png" alt="spacer rank" />
+      <br />
+      <h2 class="mt-8">測試Heading</h2>
+      <div class="h1">h1</div>
+      <div class="h2">h2</div>
+      <div class="h3">h3</div>
+      <div class="h4">h4</div>
+      <div class="h5">h5</div>
+      <div class="h6">h6</div>
+      <img src="/CookingMoment/assets/heading-L1py0g-a.png" alt="heading rank" />
+
+      <h2 class="mt-5">測試font size、font family</h2>
+      24px<span class="Body">Body</span><br />
+      16px<span class="Body2">Body2</span><br />
+      64px<span class="fs-1">fs-1</span> <br />
+      40px<span class="fs-2">fs-2</span> <br />
+      28px<span class="fs-3">fs-3</span> <br />
+      24px<span class="fs-4">fs-4</span> <br />
+      20px<span class="fs-5">fs-5</span> <br />
+      16px<span class="fs-6">fs-6</span> <br />
+      8px<span class="fs-8">fs-8</span> <br />
+      9px<span class="fs-9">fs-9</span> <br />
+      10px<span class="fs-10">fs-10</span> <br />
+      <img src="/CookingMoment/assets/fontsize-BscMRpqF.png" alt="fontsize rank" />
+
+      <h2 class="mt-10">測試icon</h2>
+      <h5>設計位於 "/assets/scss/component/_icons.scss"</h5>
+      <div>
+        class="icon-cart"<span class="ms-6 icon-cart"></span><br />
+        class="icon-menu" <span class="icon-menu"></span><br />
+        class="icon-avatar"<span class="icon-avatar"></span><br />
+        class="icon-star-outline" <span class="icon-star-outline"></span> <br />
+        class="icon-star-solid" <span class="icon-star-solid"></span> <br />
+        class="icon-arrow-left-big text-Accent" 改以Accent顯示
+        <span class="ms-7 icon-arrow-left-big text-Accent"></span> <br />
+        class="icon-arrow-left-small text-Accent" 改以Accent顯示
+        <span class="ms-7 icon-arrow-left-small text-Accent"></span> <br />
+        class="icon-arrow-right-big text-Accent" 改以Accent顯示
+        <span class="ms-7 icon-arrow-right-big text-Accent"></span> <br />
+        class="icon-arrow-right-small text-Accent" 改以Accent顯示
+        <span class="ms-7 icon-arrow-right-small text-Accent"></span> <br />
+        class="icon-circle-arrow-left"
+        <span class="ms-7 icon-circle-arrow-left"></span> <br />
+        class="icon-circle-arrow-right"
+        <span class="ms-7 icon-circle-arrow-right"></span> <br />
+        class="icon-clock"
+        <span class="ms-7 icon-clock"></span> <br />
+        class="icon-people"
+        <span class="ms-7 icon-people"></span> <br />
+        class="icon-place-order"
+        <span class="ms-7 icon-place-order"></span> <br />
+        class="icon-ellipsis"
+        <span class="ms-7 icon-ellipsis"></span> <br />
+      </div>
     </div>
 
-    <div class="m-2">
-      <h2>
-        測試button <br />
+    <div class="m-16">
+      <h2>測試button </h2>
+        class="btn btn-primary"
         <div class="btn btn-primary">Primary</div>
-        <div class="btn btn-secondary">Secondary</div>
-        <a href="#" class="link">餐桌故事</a> <br />
-        <div class="btn btn-normal">normal</div>
-        <div class="btn btn-mid">mid</div>
         <br />
-        <div class="btn btn-small align-bottom">
-          <span class="icon-place-order-white me-6"></span>
-          small
+        class="btn btn-secondary
+        <div class="btn btn-secondary">Secondary</div>
+        <br />
+         class="link"
+        <a href="#" class="link">餐桌故事</a> <br />
+        class="btn btn-normal"
+        <div class="btn btn-normal">normal</div>
+        <br />
+        class="btn btn-mid"
+        <div class="btn btn-mid">mid</div><br />
+        <div class="d-flex flex-row">
+          <img src="/CookingMoment/assets/btn_small-CxXcruYA.png" alt="btn_small png" class="d-block">
+          <div class="d-block">
+            <div class="btn btn-small align-bottom ">
+              <span class="icon-place-order-white me-6"></span>
+              small
+            </div>
         </div>
+        </div>
+        <br />
+        class="btn btn-tab-primary"
         <div class="btn btn-tab-primary">tab-primary</div>
+        <br />
+        class="btn btn-tab-primary-outline"
         <div class="btn btn-tab-primary-outline">tab-primary-outline</div>
         <br />
+        <br />
+        <h4>藉由設定 class="rating-stars" data-rating="0~5"來呈現 評等星星</h4>
+        <div class="rating-stars" data-rating="0"></div>
+        <div class="rating-stars" data-rating="1"></div>
+        <div class="rating-stars" data-rating="2"></div>
         <div class="rating-stars" data-rating="3"></div>
         <div class="rating-stars" data-rating="4"></div>
+        <div class="rating-stars" data-rating="5"></div>
       </h2>
     </div>
 

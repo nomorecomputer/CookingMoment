@@ -38,6 +38,12 @@ let touch_startTime;
 let isSwiping = false;
 
 export function add_listener_for_index() {
+  // #region 0. 註冊 demoPage 關閉按鈕
+  document.getElementById("bannerTitle").addEventListener("click", () => {
+    document.getElementById("demoPage").classList.toggle("d-none");
+    document.getElementById("demoPage").classList.toggle("d-block");
+  });
+  // #endregion
   // #region 1. 註冊 Banner background-image 向左、向右 切換 按鈕
   const arr = [
     { Id: Banner_Names.Btn_left_s, dir: Direction.Left },

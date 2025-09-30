@@ -1,6 +1,6 @@
 import "./assets/scss/all.scss";
 
-console.log("Hello world");
+console.log("【此食此刻 讚!】");
 
 import { gen_star, Add_toggle_login_logout } from "/assets/js/tools.js";
 

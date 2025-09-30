@@ -31,30 +31,26 @@ const SwipeContainerIds = [];
 const SwipeCardClassnames = [];
 let category_ellipsis_toggle = "show front";
 
-const touchXs = [];
 const cards = [];
+let touch_startX = 0;
+let touch_lastX = 0;
+let touch_startTime;
+let isSwiping = false;
 
 export function add_listener_for_index() {
   // #region 1. 註冊 Banner background-image 向左、向右 切換 按鈕
-  const leftSmallElem = document.getElementById(Banner_Names.Btn_left_s);
-  const rightSmallElem = document.getElementById(Banner_Names.Btn_right_s);
-  const leftLargeElem = document.getElementById(Banner_Names.Btn_left_l);
-  const rightLargeElem = document.getElementById(Banner_Names.Btn_right_l);
-  if (!leftSmallElem || !rightSmallElem || !leftLargeElem || !rightLargeElem)
-    return;
+  const arr = [
+    { Id: Banner_Names.Btn_left_s, dir: Direction.Left },
+    { Id: Banner_Names.Btn_right_s, dir: Direction.Right },
+    { Id: Banner_Names.Btn_left_l, dir: Direction.Left },
+    { Id: Banner_Names.Btn_right_l, dir: Direction.Right },
+  ];
 
-  leftSmallElem.addEventListener("click", () =>
-    handle_banner_rotate(Direction.Left)
-  );
-  rightSmallElem.addEventListener("click", () =>
-    handle_banner_rotate(Direction.Right)
-  );
-  leftLargeElem.addEventListener("click", () =>
-    handle_banner_rotate(Direction.Left)
-  );
-  rightLargeElem.addEventListener("click", () =>
-    handle_banner_rotate(Direction.Right)
-  );
+  arr.forEach((obj) => {
+    const elem = document.getElementById(obj.Id);
+    if (!elem) return;
+    elem.addEventListener("click", () => handle_banner_rotate(obj.dir));
+  });
   // #endregion
   // #region 2-0 以類別篩選食譜  預設先 載入 疏食類 食譜
   Load_in_recipe(Category_Names.Vegetable);
@@ -66,7 +62,6 @@ export function add_listener_for_index() {
     Category_Names.CategoryEllipsisId,
     Category_Names.RecipeContainerId
   );
-
   // #endregion
   // #region 2-2.以類別篩選食譜 註冊 向左、向右
   registry_buttons({
@@ -106,37 +101,18 @@ export function add_listener_for_index() {
 
   //#region 當所有 containerId、cardClassname 都註冊過後 跨不同container、card 註冊 card的 touchstart、touchmove
   for (let i = 0; i < SwipeCardClassnames.length; i++) {
-    touchXs.push(0);
     cards.push(document.getElementsByClassName(SwipeCardClassnames[i]));
     for (let j = 0; j < cards[i].length; j++) {
-      cards[i][j].addEventListener("touchstart", function (event) {
-        touchXs[i] = event.touches[0].clientX;
+      cards[i][j].addEventListener("touchstart", handle_touch_start);
+      cards[i][j].addEventListener("touchmove", handle_touch_move);
+      cards[i][j].addEventListener("touchend", () => endSwipe(i));
+
+      cards[i][j].addEventListener("mousedown", handleMouseDown);
+      cards[i][j].addEventListener("mouseup", function (e) {
+        handleMouseUp(e, i);
       });
-
-      cards[i][j].addEventListener("touchmove", function (event) {
-        const moveX = event.touches[0].clientX;
-        const diff = moveX - touchXs[i];
-
-        if (diff > 20) {
-          handle_header_rotate(
-            SwipeContainerIds[i],
-            SwipeCardClassnames[i],
-            Direction.Right
-          );
-
-          handle_header_rotate(
-            SwipeContainerIds[i],
-            SwipeCardClassnames[i],
-            Direction.Right
-          );
-        } else if (diff < -20) {
-          handle_header_rotate(
-            SwipeContainerIds[i],
-            SwipeCardClassnames[i],
-            Direction.Left
-          );
-        }
-        touchXs[i] = moveX;
+      cards[i][j].addEventListener("mouseleave", function (e) {
+        handleMouseUp(e, i);
       });
     }
   }
@@ -192,6 +168,47 @@ function registry_categoryMenu(
     }
   });
 }
+// ************************************************************
+function handle_touch_start(event) {
+  startSwipe(event.touches[0].clientX);
+}
+function handle_touch_move(event) {
+  if (!isSwiping) return;
+  touch_lastX = event.touches[0].clientX;
+}
+
+function handleMouseDown(event) {
+  startSwipe(event.clientX);
+}
+function handleMouseUp(event, idx) {
+  if (!isSwiping) return;
+  touch_lastX = event.clientX;
+  endSwipe(idx);
+}
+function startSwipe(currentX) {
+  touch_startTime = Date.now();
+  touch_startX = currentX;
+  isSwiping = true;
+}
+function endSwipe(idx) {
+  const diff = touch_lastX - touch_startX;
+
+  if (diff > 20) {
+    handle_header_rotate(
+      SwipeContainerIds[idx],
+      SwipeCardClassnames[idx],
+      Direction.Right
+    );
+  } else if (diff < -20) {
+    handle_header_rotate(
+      SwipeContainerIds[idx],
+      SwipeCardClassnames[idx],
+      Direction.Left
+    );
+  }
+  isSwiping = false;
+}
+// ************************************************************
 // ************************************************************
 function handle_header_rotate(containerId, cardClassName, direction) {
   const container = document.getElementById(containerId);

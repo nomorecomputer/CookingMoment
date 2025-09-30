@@ -68,6 +68,7 @@ export function add_listener_for_index() {
     containerId: Category_Names.RecipeContainerId,
     cardClassName: Category_Names.RecipeClassname,
     supportBtn: SupportOrNot.Support,
+    supportSwipe: SupportOrNot.Support,
     buttons: [
       { buttonId: "category-left", direction: Direction.Left },
       { buttonId: "category-right", direction: Direction.Right },

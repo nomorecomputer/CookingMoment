@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- header -->
+    <%- include("./layout/header"); -%>
+
+    <div class="heading_top_offset">
+      <!-- banner 1 -->
+      <%- include("./layout/index/index_1") -%>
+
+      <!--  設計稿 demo page -->
+
+      <div
+        class="btn btn-primary ms-10 my-10 h6 h-md-4 d-none"
+        id="demoPage"
+        onclick="window.open('component_demo.html','_blank')"
+      >
+        開啟共用設計demo頁
+      </div>
+
+      <!-- recip 2 -->
+      <%- include("./layout/index/index_2") -%>
+      <!-- popular selections 3 -->
+      <%- include("./layout/index/index_3") -%>
+      <!-- about us 4 -->
+      <%- include("./layout/index/index_4") -%>
+      <!-- Table Story 5 -->
+      <%- include("./layout/index/index_5") -%>
+      <!-- policy -->
+      <%- include("./layout/index/index_6") -%>
+      <!-- footer -->
+      <%- include("./layout/footer"); -%>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="/assets/js/tools.js"></script>
+    <script type="module" src="/assets/js/index.js"></script>
+  </body>
+</html>

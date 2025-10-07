@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+    <title>index</title>
+  </head>
+  <body>
+    <!-- 功能清單 -->
+    <ol class="h3 text-primary m-16">
+      <li class="mb-4"><a href="#測試color">測試color</a></li>
+      <li class="mb-4"><a href="#測試spacer">測試spacer</a></li>
+      <li class="mb-4"><a href="#測試Heading">測試Heading</a></li>
+      <li class="mb-4"><a href="#測試md專用的class">測試md專用的class</a></li>
+      <li class="mb-4">
+        <a href="#測試font size、font family">測試font size、font family</a>
+      </li>
+      <li class="mb-4"><a href="#測試icon">測試icon</a></li>
+      <li class="mb-4"><a href="#測試button">測試button</a></li>
+      <li class="mb-4">
+        <a href="#內文太長、自動截斷 並 附加..."
+          >內文太長、自動截斷 並 附加...</a
+        >
+      </li>
+      <li class="mb-4">
+        <a href="#新增一個網頁">新增一個網頁(以test.html為例)</a>
+        <ol>
+          <li class="m-3">
+            <a href="#在正確目錄 加入一個 test.html"
+              >在正確目錄 加入一個 test.html</a
+            >
+          </li>
+          <li class="m-3">
+            <a href="#test.html 內至少需要的內容">test.html 內至少需要的內容</a>
+          </li>
+          <li>
+            <a href="#內容直接寫在test.html內，或另外由ejs插入"
+              >內容直接寫在test.html內，或另外由ejs插入</a
+            >
+            <ul>
+              <li>
+                <a href="#網頁內容特多時，宜分別寫在*.ejs 再引入到test.html">
+                  網頁內容特多時，宜分別寫在*.ejs 再引入到test.html</a
+                >
+              </li>
+              <li>
+                <a href="#網頁內容少時，可直接在test.html撰寫"
+                  >網頁內容少時，可直接在test.html撰寫</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#SCSS目錄規劃">SCSS目錄規劃</a>
+            <ul>
+              <li>
+                <a href="#SCSS除接受一般CSS語法之外，還有許多強大功能"
+                  >SCSS除接受一般CSS語法之外，還有許多強大功能</a
+                >
+              </li>
+              <li><a href="#SCSS目錄說明">SCSS目錄說明</a></li>
+            </ul>
+          </li>
+          <li><a href="#圖片目錄規劃">圖片目錄規劃</a></li>
+          <li><a href="#js目錄規劃">js目錄規劃</a></li>
+        </ol>
+      </li>
+      <li class="mb-4"><a href="#"></a></li>
+    </ol>
+    <!-- #endregion -->
+    <!-- #region 測試color -->
+    <div class="m-16">
+      <div class="h2" id="測試color">測試color</div>
+      <div class="d-flex flex-row flex-wrap">
+        <div class="me-10">
+          primary
+          <div class="bg-primary box"></div>
+        </div>
+        <div class="me-10">
+          Accent
+          <div class="bg-Accent box"></div>
+        </div>
+        <div class="me-10">
+          secondary
+          <div class="bg-secondary box"></div>
+        </div>
+        <div class="me-10">
+          footer
+          <div class="bg-footer box"></div>
+        </div>
+        <div class="me-10">
+          bg-card
+          <div class="bg-bg-card box"></div>
+        </div>
+        <div class="me-10">
+          star
+          <div class="bg-star box"></div>
+        </div>
+        <div class="me-10">
+          text
+          <div class="bg-text box"></div>
+        </div>
+        <div class="me-10">
+          text-grey
+          <div class="bg-text-grey box"></div>
+        </div>
+        <div class="me-10">
+          bg-grey
+          <div class="bg-bg-grey box"></div>
+        </div>
+        <div class="me-10">
+          white
+          <div class="bg-white box"></div>
+        </div>
+      </div>
+      <h5>除bg-、text- ，也可直接使用 sass變數，如 $primary、$Accent、...</h5>
+      <!-- #endregion -->
+      <!-- #region 測試spacer -->
+      <h2 class="mt-6" id="測試spacer">測試spacer</h2>
+      p-0:<span class="p-0">padding 0px</span><br />
+      p-1:<span class="p-1">padding 2px</span><br />
+      p-2:<span class="p-2">padding 4px</span><br />
+      p-4:<span class="p-4">padding 8px</span><br />
+      p-8:<span class="p-8">padding 16px</span><br />
+      p-16:<span class="p-16">padding 32px</span><br />
+      <h5>pt、 pb-、 ps-、 pe-、 mt-、 mb-、...類推套用</h5>
+      <img src="/assets/images/demo_common/spacer.png" alt="spacer rank" />
+      <br />
+      <!-- #endregion -->
+      <!-- #region 測試Heading -->
+      <h2 class="mt-8" id="測試Heading">測試Heading</h2>
+      <div class="h1">h1</div>
+      <div class="h2">h2</div>
+      <div class="h3">h3</div>
+      <div class="h4">h4</div>
+      <div class="h5">h5</div>
+      <div class="h6">h6</div>
+      <img src="/assets/images/demo_common/heading.png" alt="heading rank" />
+      <br />
+      <!-- #endregion -->
+      <!-- #region 測試md專用的class -->
+      <h2 class="mt-8" id="測試md專用的class">
+        測試 <span class="text-Accent">md專用</span> 的class
+      </h2>
+      <div class="Body-md">Body-md</div>
+      <div class="Body2-md">Body2-md</div>
+      <div class="h-md-1">h-md-1</div>
+      <div class="h-md-2">h-md-2</div>
+      <div class="h-md-3">h-md-3</div>
+      <div class="h-md-4">h-md-4</div>
+      <div class="h-md-5">h-md-5</div>
+      <div class="h-md-6">h-md-6</div>
+      <span class="h5">定義於"/assets/scss/base/_base.scss"</span><br />
+      <img src="/assets/images/demo_common/md.png" alt="heading rank" />
+      <br />
+      <!-- #endregion -->
+      <!-- #region 測試font size、font family -->
+      <h2 class="mt-5" id="測試font size、font family">
+        測試font size、font family
+      </h2>
+      24px<span class="Body">Body</span><br />
+      16px<span class="Body2">Body2</span><br />
+      64px<span class="fs-1">fs-1</span> <br />
+      40px<span class="fs-2">fs-2</span> <br />
+      28px<span class="fs-3">fs-3</span> <br />
+      24px<span class="fs-4">fs-4</span> <br />
+      20px<span class="fs-5">fs-5</span> <br />
+      16px<span class="fs-6">fs-6</span> <br />
+      8px<span class="fs-8">fs-8</span> <br />
+      9px<span class="fs-9">fs-9</span> <br />
+      10px<span class="fs-10">fs-10</span> <br />
+      <img src="/assets/images/demo_common/fontsize.png" alt="fontsize rank" />
+      <!-- #endregion -->
+      <!-- #region 測試icon -->
+      <h2 class="mt-10" id="測試icon">測試icon</h2>
+      <h5>設計位於 "/assets/scss/component/_icons.scss"</h5>
+      <div>
+        class="icon-cart"<span class="ms-6 icon-cart"></span><br />
+        class="icon-menu" <span class="icon-menu"></span><br />
+        class="icon-avatar"<span class="icon-avatar"></span><br />
+        class="icon-star-outline" <span class="icon-star-outline"></span> <br />
+        class="icon-star-solid" <span class="icon-star-solid"></span> <br />
+        class="icon-arrow-left-big text-Accent" 改以Accent顯示
+        <span class="ms-7 icon-arrow-left-big text-Accent"></span> <br />
+        class="icon-arrow-left-small text-Accent" 改以Accent顯示
+        <span class="ms-7 icon-arrow-left-small text-Accent"></span> <br />
+        class="icon-arrow-right-big text-Accent" 改以Accent顯示
+        <span class="ms-7 icon-arrow-right-big text-Accent"></span> <br />
+        class="icon-arrow-right-small text-Accent" 改以Accent顯示
+        <span class="ms-7 icon-arrow-right-small text-Accent"></span> <br />
+        class="icon-circle-arrow-left"
+        <span class="ms-7 icon-circle-arrow-left"></span> <br />
+        class="icon-circle-arrow-right"
+        <span class="ms-7 icon-circle-arrow-right"></span> <br />
+        class="icon-clock"
+        <span class="ms-7 icon-clock"></span> <br />
+        class="icon-people"
+        <span class="ms-7 icon-people"></span> <br />
+        class="icon-place-order"
+        <span class="ms-7 icon-place-order"></span> <br />
+        class="icon-ellipsis"
+        <span class="ms-7 icon-ellipsis"></span> <br />
+      </div>
+    </div>
+    <!-- #endregion -->
+    <!-- #region 測試button -->
+    <div class="m-16" id="測試button">
+      <h2>測試button</h2>
+      <h5>
+        若button寬度有例外、不是制式，可以使用以下class 並自行定義：顏色、寬度
+        混用
+      </h5>
+      class="btn btn-primary"
+      <div class="btn btn-primary">Primary</div>
+      <br />
+      class="btn btn-secondary
+      <div class="btn btn-secondary">Secondary</div>
+      <br />
+      class="link"
+      <a href="#" class="link">餐桌故事</a> <br />
+      class="btn btn-normal"
+      <div class="btn btn-normal">normal</div>
+      <br />
+      class="btn btn-mid"
+      <div class="btn btn-mid">mid</div>
+      <br />
+      <div class="d-flex flex-row">
+        <img
+          src="/assets/images/demo_common/btn_small.png"
+          alt="btn_small png"
+          class="d-block"
+        />
+        <div class="d-block">
+          <div class="btn btn-small align-bottom">
+            <span class="icon-place-order-white me-6"></span>
+            small
+          </div>
+        </div>
+      </div>
+      <br />
+      class="btn btn-tab-primary"
+      <div class="btn btn-tab-primary">tab-primary</div>
+      <br />
+      class="btn btn-tab-primary-outline"
+      <div class="btn btn-tab-primary-outline">tab-primary-outline</div>
+      <br />
+      <br />
+      <h4>藉由設定 class="rating-stars" data-rating="0~5"來呈現 評等星星</h4>
+      <div class="rating-stars" data-rating="0"></div>
+      <div class="rating-stars" data-rating="1"></div>
+      <div class="rating-stars" data-rating="2"></div>
+      <div class="rating-stars" data-rating="3"></div>
+      <div class="rating-stars" data-rating="4"></div>
+      <div class="rating-stars" data-rating="5"></div>
+      <br />
+    </div>
+    <!-- #endregion -->
+    <!-- #region 內文太長、自動截斷 並 附加... -->
+    <div class="m-16" id="內文太長、自動截斷 並 附加...">
+      <h2>當內文太長，超過版面，需要自動截斷、附加"..." 參考下圖</h2>
+      <img src="/assets/images/demo_common/apply-multiline-limit.png" alt="" />
+      <h5>
+        @mixin 定義在 "/assets/scss/base/_base.scss" 如下圖 (僅支援
+        支持webkit的瀏覽器
+        如：chrome、Safari，其他瀏覽器仍可截斷，但不會自動加上"..."
+      </h5>
+      <img src="/assets/images/demo_common/multiline-limit.png" alt="" />
+    </div>
+    <!-- #endregion -->
+    <!-- #region 新增一個網頁 -->
+    <div class="mt-10" id="新增一個網頁">
+      <h2>新增一個網頁(以test.html為例)</h2>
+      <ol>
+        <li class="h4 m-5">
+          <div id="在正確目錄 加入一個 test.html">
+            <h4>在正確目錄 加入一個 test.html</h4>
+            <img src="/assets/images/demo_common/html_path.png" alt="" />
+          </div>
+        </li>
+        <li class="h4 m-5" id="test.html 內至少需要的內容">
+          <div>
+            <h4>test.html 內至少需要的內容</h4>
+            <h4>
+              依據註解的三步驟(1~3)， 步驟三：引入js檔案，放在最後
+              緊貼著body結束標籤
+            </h4>
+            <div class="mb-2">
+              <span class="text-Accent">記得把自己撰寫的js，加在步驟三</span
+              ><br />
+              <span
+                >自己寫的js檔，路徑放在/assets/js/xxx.js
+                請留心global變數，不要重複衝突</span
+              ><br /><span>
+                自己的js檔名，可以取成跟html一樣。方便自己對照；譬如:test.js
+              </span>
+            </div>
+
+            <img src="/assets/images/demo_common/html_content_1.png" alt="" />
+          </div>
+        </li>
+        <li class="h4 m-5" id="內容直接寫在test.html內，或另外由ejs插入">
+          <div>
+            <h4>內容直接寫在test.html內，或另外由ejs插入</h4>
+            <ol>
+              <li id="網頁內容特多時，宜分別寫在*.ejs 再引入到test.html">
+                <div>
+                  <h4>網頁內容特多時，宜分別寫在*.ejs 再引入到test.html</h4>
+                  <div>
+                    <p>
+                      以首頁index.html為例，內容非常多(見下圖)；若全部一起放在index.html內，將會非常混亂，自己開發時就眼花撩亂。
+                    </p>
+                    <p>所以依據不同區域，分別撰寫在不同的*.ejs</p>
+                    <div class="d-flex flex-row">
+                      <img
+                        class="me-15"
+                        src="/assets/images/demo_common/index.png"
+                        alt=""
+                      />
+                      <img
+                        src="/assets/images/demo_common/multi-ejs.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li id="網頁內容少時，可直接在test.html撰寫">
+                <div>
+                  <h4>網頁內容少時，可直接在test.html撰寫</h4>
+                  <p>
+                    若有加上header，因為header是浮貼在最上方(不會被垂直卷軸捲走)，
+                    所以內容必須一律以margion-top避開上端(另外，還要考慮大小版
+                    header高度會改變)。
+                  </p>
+                  <p>
+                    為方便操作
+                    請把自己撰寫的內容(不包含header.ejs)包在一個class=<span
+                      >"heading_top_offset" 的div內。 如下圖：</span
+                    ><br />
+                    <img
+                      src="/assets/images/demo_common/html_content_2.png"
+                      alt=""
+                    />
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </li>
+        <li class="h4 m-5" id="SCSS目錄規劃">
+          <h4>SCSS目錄規劃</h4>
+          <ul>
+            <li id="SCSS除接受一般CSS語法之外，還有許多強大功能">
+              <div>
+                <h5>SCSS除接受一般CSS語法之外，還有許多強大功能</h5>
+                <div>
+                  <p>本專案中使用SCSS，舉兩個例子：</p>
+                  <ul>
+                    <li>
+                      <h4 class="text-Accent">
+                        @minin、@include 節省大量CSS的撰寫
+                      </h4>
+                      <p>
+                        譬如:本專案必須事先定義許多button的樣式，將共同的樣式提出，並加入參數；如此可以大量節省撰寫CSS
+                        (下圖為_button.scss)
+                      </p>
+                      <ul class="mb-8">
+                        <li>
+                          <span class="text-primary">@mixin：</span>
+                          定義了一組CSS，類似function；可以接受參數
+                        </li>
+                        <li>
+                          <span class="text-primary">@include ：</span>
+                          引用事先定義的@minin，並給予所需之參數；就可以方便了事。否則，想一響我們要定義多少
+                          button?
+                        </li>
+                        <li>
+                          <span class="text-primary">@extend ：</span>
+                          也可以引用 之前已經定義好的class
+                        </li>
+                        <li>
+                          <span class="text-primary">巢狀定義：</span>
+                          本例中連帶把btn
+                          hover、focus都定義在當中；方便管理、減少混亂
+                        </li>
+                      </ul>
+                      <img
+                        src="/assets/images/demo_common/why_SCSS_1.png"
+                        alt=""
+                      />
+                      <div></div>
+                    </li>
+                    <li class="m-10">
+                      <h4 class="text-Accent">
+                        map 定義集合搭配 @each迴圈 自動產出class定義
+                      </h4>
+                      <p>
+                        本次設計稿中大量使用h1~h6、Body、Body2等自型定義；但bootstrap中預設heading並沒有responsive；而我們本次採以md為決斷點，需要大量的
+                        h-md-X；下突圍_base.scss中的例子
+                      </p>
+                      <img
+                        src="/assets/images/demo_common/why_SCSS_2.png"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li id="SCSS目錄說明">
+              SCSS目錄說明
+              <div class="d-flex d-row">
+                <img src="/assets/images/demo_common/scas_layout.png" alt="" />
+                <ol class="mx-15">
+                  <li class="mb-8 text-primary">
+                    位於
+                    <span class="text-Accent">/assets/scss/ 目錄下</span
+                    >，在依照功能區分子目錄
+                  </li>
+                  <span class="text-Accent"></span>
+                  <li class="mb-8 text-primary">
+                    /base ：<span class="text-Accent">_base.scss</span>
+                    裡面放字體、無法由客製化Bootstrap 所需共用的class
+                  </li>
+                  <li class="mb-8 text-primary">
+                    /component 裡面有兩個檔案：<span class="text-Accent"
+                      >_button.scss、_icon.scss</span
+                    >
+                    設計稿內的 button、icon
+                    共用設計，除客製bootstrap之外，幾乎都在這兩個檔案中
+                  </li>
+                  <li class="mb-8 text-primary">
+                    /layout：目前裡面放
+                    <span class="text-Accent"> _header.scss、_footer.scss</span
+                    >兩個scss； 分別為header.esj、footer.ejs所使用
+                  </li>
+                  <li class="mb-8 text-primary">
+                    /pages：
+                    <span class="text-Accent">自己寫的網頁，所需的scss</span>
+                    可以放在這目錄。譬如：index.html所使用的_index.scc、test.html所使用的_test.bg-success-subtle
+                  </li>
+                  <li class="mb-8 text-primary">
+                    /utils：
+                    <span class="text-Accent"
+                      >客製bootstrap所需的變數，放在_variables.scc</span
+                    >
+                    ，另外_utilities.scss內放置擴充bootstrap $utilities的內容
+                  </li>
+                  <li class="mb-8 text-primary">
+                    <span class="text-Accent h3">all.scss</span>
+                    <div>
+                      <ul>
+                        <li>
+                          為何自己的test.html中<span class="text-Accent"
+                            >不需要加入scss的參考</span
+                          >
+                          ，如下圖：<span></span><br />
+                          <img
+                            src="/assets/images/demo_common/reference_SCSS.png"
+                            alt=""
+                            class="my-8"
+                          />
+                          <p>
+                            因為在 all.scss中，已經有import _test.scss；而且
+                            all.scss中 import 不同 _XXX.ejs的順序很重要。
+                          </p>
+                          <p>
+                            譬如：我們在_test.scss中
+                            使用了_button.scss內的定義；所以
+                            /component/目錄內的兩個檔案，必須比_test.scss先被import。
+                            而_button.scss可能用到bootstrap客製化後的class，所以bootstrap客製化相關的_XXX.scss更必須要早於
+                            /component被import
+                          </p>
+                          <p class="text-Accent">
+                            請記得為自己寫得
+                            _XXX.scss，在all.scss內加上一筆import
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            為何all.scss檔名前，不需要加上底線(_)；而我們自己寫的
+                            <span class="text-Accent"
+                              >XXX.scss檔名前需要加上底線</span
+                            >
+                          </p>
+                          <p>
+                            scss語法的便利性，是提供給開法者；瀏覽器只能解讀css。
+                            所以scss檔案，送出前必須要先編譯、轉換成 css。
+                            當all.scss內已經import了所需的_XXX.scss之後，
+                            展開成了一個巨大的SCSS，然後依照順序被編譯、轉換 為
+                            最終的CSS。 既然我們寫的_XXX.scss已經列入其中；
+                            就要有方式區別，那些SCSS是需要編譯轉換、那些SCSS已經在別處被import了，不需要重複編譯。
+                            檔名的底線，就是做此用途。
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="h4 m-10" id="圖片目錄規劃">
+          <h4>圖片目錄規劃</h4>
+
+          <p>
+            圖片放在 /assets/images/目錄之下，
+            請依據自己的網頁(譬如以網頁名稱)， 於/assets/images/之下
+            開對應的子目錄，否則網頁一多，圖片數量會很驚人，檔案名稱難免會衝突，會很難管理。參考下圖：
+          </p>
+          <img src="/assets/images/demo_common/image_layout.png" alt="" />
+        </li>
+        <li class="h4 m-10" id="js目錄規劃">
+          <h4>js目錄規劃</h4>
+
+          <p>
+            js放在 /assets/js/目錄之下，有撰寫js需求時，可以於該目錄下新增
+            XXX.js。
+            以index.html為例，所使用大量的js程式，都撰寫在index.js中。如此分隔檔案開發，比較容易管理、除錯。
+          </p>
+          <img src="/assets/images/demo_common/js_layout.png" alt="" />
+        </li>
+      </ol>
+    </div>
+    <!-- #endregion -->
+    <div></div>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="/assets/js/tools.js"></script>
+  </body>
+</html>

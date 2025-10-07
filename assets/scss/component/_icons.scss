@@ -1,0 +1,73 @@
+@mixin icon($width, $height, $icon, $default-color) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background-color: currentColor; /* 這是關鍵！背景色會從父層繼承 */
+  color: $default-color;
+  //   color: currentColor;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("/assets/images/icon/#{$icon}.svg");
+  mask-image: url("/assets/images/icon/#{$icon}.svg");
+}
+
+.icon-cart {
+  @include icon(20px, 20px, Cart, $secondary);
+}
+.icon-menu {
+  @include icon(18px, 12px, menu, $secondary);
+}
+.icon-avatar {
+  @include icon(20px, 20px, avatar, $secondary);
+}
+.icon-cross {
+  @include icon(14px, 14px, cross, $primary);
+}
+.icon-star-outline {
+  @include icon(20px, 19px, star_outline, $star);
+}
+.icon-star-solid {
+  @include icon(20px, 19px, star_solid, $star);
+}
+.icon-arrow-left-big {
+  @include icon(25px, 45px, arrow_left, $white);
+}
+.icon-arrow-left-small {
+  @include icon(15.5px, 27.5px, arrow_left, wheat);
+}
+.icon-arrow-left-tiny {
+  @include icon(7.68px, 13.68px, arrow_left, wheat);
+}
+.icon-arrow-right-big {
+  @include icon(25px, 45px, arrow_right, $white);
+}
+.icon-arrow-right-small {
+  @include icon(15.5px, 27.5px, arrow_right, wheat);
+}
+.icon-arrow-right-tiny {
+  @include icon(7.68px, 13.68px, arrow_right, wheat);
+}
+
+.icon-circle-arrow-left {
+  @include icon(48px, 48px, circle_arrow_left, $primary);
+}
+.icon-circle-arrow-right {
+  @include icon(48px, 48px, circle_arrow_right, $primary);
+}
+.icon-clock {
+  @include icon(20px, 20px, clock, $primary);
+}
+.icon-people {
+  @include icon(22px, 16px, people, $primary);
+}
+.icon-place-order {
+  @include icon(21px, 20px, place_order, $primary);
+}
+.icon-place-order-white {
+  @include icon(21px, 20px, place_order, $white);
+}
+.icon-ellipsis {
+  @include icon(48px, 8px, ellipsis, $primary);
+}

@@ -1,0 +1,151 @@
+<div class="header fixed-top">
+  <div class="container position-relative">
+    <div class="d-flex w-100 align-items-center justify-content-between">
+      <!-- 左方logo -->
+      <div>
+        <a class="py-6 d-block d-md-none" href="#">
+          <img src="/assets/images/logo_small.png" alt="此食此刻Logo 小" />
+        </a>
+        <a class="navbar-brand py-md-0 d-none d-md-block" href="#">
+          <img src="/assets/images/logo_big.png" alt="此食此刻Logo 大" />
+        </a>
+      </div>
+
+      <!-- 中間自適應的div -->
+      <div class="flex-grow-1 mx-2 d-none d-md-block">
+        <div class="">
+          <ul
+            class="list-unstyled d-flex justify-content-evenly h5 text-primary"
+          >
+            <li>
+              <a class="text-decoration-none" href="#product_list">產品列表</a>
+            </li>
+            <li>
+              <a class="text-decoration-none" href="#table_story">餐桌故事</a>
+            </li>
+            <li>品牌故事</li>
+            <li>
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 右側 購物車、人像、menu漢堡按鈕 -->
+      <div class="d-flex align-items-center">
+        <!-- 購物車 -->
+        <div class="position-relative pt-3">
+          <span class="icon-cart mx-7 pt-5 z-2"></span>
+          <span
+            class="position-absolute bg-Accent text-white cart-tag rounded-pill py-1 px-2"
+            id="header-order-qty"
+          >
+            2
+          </span>
+        </div>
+
+        <!-- 人像 & user alias-->
+        <div
+          class="mx-7 flex-row"
+          id="header-login-status"
+          data-logined="true"
+          data-bs-target="#userOffCanvas"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <div id="header-avatar" class="d-block">
+            <img
+              src="/assets/images/header/avatar-1.png"
+              class="avatar rounded-circle"
+              alt="user avatar"
+            />
+            <span class="fs-7 text-primary">Jenny</span>
+          </div>
+          <a
+            href="#"
+            class="Body2 text-secondary text-decoration-none d-none"
+            id="header-toLogin"
+            >會員登入</a
+          >
+        </div>
+
+        <!-- menu 小版之下拉 功能清單 -->
+        <div class="mx-7 d-block d-md-none">
+          <button
+            class="border-0"
+            type="button"
+            id="header-menu-btn"
+            data-bs-toggle="dropdown"
+          >
+            <span class="icon-menu"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" id="header-menu-list">
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#product_list">產品列表</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#table_story">餐桌故事</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">品牌故事</li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- user profile  offcanvas  -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="header-userOffCanvas"
+  aria-labelledby="offcanvasNavbarLabel"
+>
+  <div class="p-10 d-flex justify-content-end">
+    <button
+      type="button"
+      id="header-close-usercanvas"
+      class="btn-close p-5 fs-8"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body p-7">
+    <div class="d-flex mb-5">
+      <img
+        src="/assets/images/header/avatar-1.png"
+        alt="user picture"
+        class="d-block my-2 me-2 avatar border-1"
+      />
+      <div class="mb-10">
+        <p class="fs-7 text-primary fw-bolder m-0">Jessica</p>
+        <p class="fs-7 text-secondary">jenny@gamil.com</p>
+      </div>
+    </div>
+    <div class="h5 text-primary">
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> article </span>
+        <span class="">訂單管理</span>
+      </div>
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> favorite </span>
+        <span class="">我的收藏</span>
+      </div>
+      <div class="py-4">
+        <span class="material-icons-outlined align-bottom"> settings </span>
+        <span class="">帳號設定</span>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-footer p-7">
+    <div class="h5 py-4 text-primary">
+      <a href="" class="text-decoration-none" id="user-logout">
+        <span class="material-symbols-outlined"> logout </span>
+        <spanfs-8>登出</spanfs-8>
+      </a>
+    </div>
+  </div>
+</div>

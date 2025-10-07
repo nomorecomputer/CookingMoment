@@ -1,0 +1,70 @@
+@mixin btn_func($c-default, $c-hover, $c-focus, $width) {
+  @extend h5;
+  background-color: $c-default;
+  color: $white;
+  width: $width;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  &:hover {
+    background-color: $c-hover;
+    color: $white;
+  }
+  &:focus {
+    background-color: $c-focus;
+    color: $white;
+  }
+}
+.btn-primary {
+  @include btn_func($primary, #405642, #304032, 196px);
+}
+.btn-secondary {
+  @include btn_func($secondary, #917441, #624d28, 196px);
+}
+.link {
+  @extend h5;
+  color: $primary;
+  text-decoration: none;
+  &:hover {
+    color: $secondary;
+  }
+}
+.btn-normal {
+  @include btn_func($secondary, #917441, #624d28, 274px);
+}
+.btn-mid {
+  @include btn_func($primary, #405642, #304032, 164px);
+}
+.btn-small {
+  @include btn_func($secondary, #917441, #624d28, 142px);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  color: $white;
+}
+
+@mixin btn_tab() {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid $primary;
+  padding-top: 7.2px;
+  padding-bottom: 7.2px;
+  padding-left: 27px;
+  padding-right: 27px;
+  border-radius: 800px;
+}
+.btn-tab-primary {
+  @include btn_func($primary, #405642, #304032, auto);
+  @include btn_tab();
+}
+.btn-tab-primary-outline {
+  @include btn_func($white, #405642, #304032, auto);
+  color: $primary;
+  @include btn_tab();
+}

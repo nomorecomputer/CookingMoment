@@ -1,0 +1,344 @@
+.heading_top_offset {
+  padding-top: 84px; //img height :60px + my 12*2
+  @include media-breakpoint-up(md) {
+    padding-top: 80px;
+  }
+}
+
+/* #region 1. 最上方 banner */
+.index_banner {
+  background-image: url("/assets/images/index/banner1_large.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 606px;
+  @include media-breakpoint-up(md) {
+    height: 729px;
+  }
+}
+
+.index_banner_text {
+  margin-top: 392px;
+  @include media-breakpoint-up(md) {
+    margin-top: 273px;
+  }
+}
+/* #endregion */
+
+/* #region 2.以類別 找食譜  */
+.category-item.selected {
+  border: 2px solid $primary;
+}
+.category-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+  @include media-breakpoint-up(md) {
+    // width: 156px;
+    // height: 156px;
+    // border-radius: 78px;
+  }
+}
+
+.ellipsis {
+  display: block;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.category-card {
+  width: 257px;
+  height: 561px;
+  border-radius: 10px;
+  background-color: $bg-card;
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  margin-right: 12px;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+  img {
+    height: 292px;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  .img_normal {
+    display: block;
+  }
+  .img_hover {
+    display: none;
+  }
+  .card_body {
+    height: 269px;
+    padding: 16px;
+    display: block;
+    .description-height {
+      height: 141px;
+    }
+    .limit-length {
+      @include text-multiline-truncate(
+        $font-size: 16px,
+        $line-height: 1.5,
+        $max-line-Number: 2
+      );
+    }
+    .last-portion {
+      height: 84px;
+      display: flex;
+      flex-direction: column;
+    }
+    .portion1 {
+      height: 24px;
+      margin-bottom: 12px;
+    }
+    .portion2 {
+      width: 225px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    width: 306px;
+    height: 561px;
+    img {
+      height: 292px;
+    }
+    .card_body {
+      height: 269px;
+      .description-height {
+        height: 141px;
+      }
+      .last-portion {
+        display: flex;
+        flex-direction: column;
+        height: 84px;
+      }
+      .portion1 {
+        height: 24px;
+        margin-bottom: 12px;
+      }
+      .portion2 {
+        width: 274px;
+      }
+    }
+
+    &:hover {
+      width: 636px;
+      .img_normal {
+        display: none;
+      }
+      .img_hover {
+        display: block;
+      }
+      .card_body {
+        height: 269px;
+        .inner-width {
+          width: 604px;
+        }
+        .description-height {
+          height: 177px;
+        }
+        .limit-length {
+          @include text-multiline-truncate(
+            $font-size: 16px,
+            $line-height: 1.5,
+            $max-line-Number: 4
+          );
+        }
+        .last-portion {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 604px;
+          height: 48px;
+        }
+        .portion1 {
+          width: 256px;
+          height: 24px;
+          margin-bottom: 0;
+          margin-top: 12px;
+          margin-bottom: 12px;
+        }
+        .portion2 {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+/* #endregion */
+
+/* #region 3.人氣精選  */
+.selection-card {
+  width: 257px;
+  height: 507px;
+  border-radius: 10px;
+  background-color: $bg-grey;
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  margin-right: 12px;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+  &:hover {
+    border: 2px solid $primary;
+  }
+  img {
+    width: 257px;
+    height: 203px;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .card_body {
+    padding: 16px;
+    width: 257px;
+    height: 304px;
+    display: block;
+    .inner-width {
+      width: 225px;
+    }
+    .description-height {
+      height: 140px;
+    }
+    .limit-length {
+      @include text-multiline-truncate(
+        $font-size: 16px,
+        $line-height: 1.5,
+        $max-line-Number: 2
+      );
+    }
+  }
+  @include media-breakpoint-up(md) {
+    width: 306px;
+    height: 608px;
+    img {
+      width: 306px;
+      height: 292px;
+    }
+    .card_body {
+      width: 306px;
+      height: 316px;
+      .inner-width {
+        width: 274px;
+      }
+      .description-height {
+        height: 144px;
+      }
+    }
+  }
+}
+/* #endregion */
+
+/* #region 4.關於我們 */
+.about_banner {
+  @include media-breakpoint-up(md) {
+    background-image: url("/assets/images/index/about_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 844px;
+  }
+}
+/* #endregion */
+
+/* #region 5.餐桌故事 */
+.tableStory-card {
+  height: 305px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  margin-right: 12px;
+  cursor: grab;
+  &.active {
+    cursor: grabbing;
+  }
+  .top_area {
+    width: 256px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 25px;
+  }
+  .user_img {
+    width: 120px;
+    height: 100px;
+    margin-right: 12px;
+  }
+  .user_name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $text-grey;
+  }
+  .title {
+    margin-bottom: 12px;
+    @extend h5;
+    color: $primary;
+  }
+  .description {
+    @extend .Body2;
+    height: 72px;
+    color: $text-grey;
+    margin-bottom: 12px;
+  }
+  .text-limit {
+    @include text-multiline-truncate(
+      $font-size: 16px,
+      $line-height: 1.5,
+      $max-line-Number: 3
+    );
+  }
+  @include media-breakpoint-up(md) {
+  }
+}
+/* #endregion */
+
+/* #region 6.還在為下廚煩惱 & 物流、退貨、付款 */
+.policy_banner {
+  height: 246px;
+  background-color: $primary;
+  border-radius: 16px;
+
+  @include media-breakpoint-up(md) {
+    height: 192px;
+    .top_area {
+      width: 360px;
+    }
+  }
+}
+
+.policy_item {
+  max-width: 155px;
+
+  @include media-breakpoint-up(md) {
+    min-width: 130px;
+  }
+}
+/* #endregion */
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #5c7c5f;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  &.active {
+    background: #6bd195;
+  }
+}

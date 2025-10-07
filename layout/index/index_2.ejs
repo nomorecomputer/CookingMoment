@@ -1,0 +1,82 @@
+<div class="container-with-padding my-18 my-md-30 mx-auto" id="product_list">
+  <!-- 類別食譜 上方 類別清單 -->
+  <div class="container overflow-hidden bg-white mb-13">
+    <div
+      class="container-with-padding d-flex flex-row bg-white justify-content-between"
+      id="category-slider"
+    ></div>
+  </div>
+  <!-- <div
+    class="container-with-padding d-flex flex-row overflow-hidden bg-white mb-12 mb-md-26 justify-content-between"
+    id="category-menu"
+  >
+    <img
+      src="/images/index/category1_meat.png"
+      class="category-item"
+      data-category="meat"
+      alt="meat.png"
+    />
+    <img
+      src="/images/index/category2_seafood.png"
+      class="category-item"
+      data-category="seafood"
+      alt="seafood.png"
+    />
+    <img
+      src="/images/index/category3_vegetable.png"
+      class="category-item selected"
+      data-category="vegetable"
+      alt="vegetable.png"
+    />
+    <img
+      src="/images/index/category4_vegetarian.png"
+      class="category-item"
+      data-category="vegetarian"
+      alt="vegetarian.png"
+    />
+    <img
+      src="/images/index/category5_Ketogenic.png"
+      class="category-item"
+      data-category="ketogenic"
+      alt="Ketogenic.png"
+    />
+    <img
+      src="/images/index/category6_all.png"
+      class="category-item"
+      data-category="all"
+      alt=""
+    />
+  </div> -->
+
+  <div
+    id="category-indicator-container"
+    class="d-flex flex-row mb-12 m-auto justify-content-center mb-15 mb-md-20"
+  ></div>
+
+  <!-- <div class="icon-ellipsis ellipsis mb-12 m-auto" id="category-ellipsis">
+    ...
+  </div> -->
+  <!-- 類別食譜 下方 卡片區  -->
+  <div
+    class="container-with-padding d-flex flex-row overflow-hidden mb-14 mb-md-22"
+    id="category-cards"
+  ></div>
+  <!-- 人氣精選 card向左、向右按鈕-->
+  <div class="w-100 d-flex justify-content-center">
+    <div class="text-primary">
+      <span
+        class="icon-circle-arrow-left me-12"
+        type="button"
+        id="category-left"
+      ></span>
+      <span
+        class="icon-circle-arrow-right"
+        type="button"
+        id="category-right"
+      ></span>
+    </div>
+  </div>
+</div>
+<!-- ********************************************** -->
+<!-- ********************************************** -->
+<%- include("./layout/index/recipeRepository") -%>

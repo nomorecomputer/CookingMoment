@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1.引入 header -->
+    <%- include("./layout/header"); -%>
+
+    <!-- 4. 記得包在 heading_top_offset -->
+    <div class="heading_top_offset">
+      <!-- 這裡撰寫 -->
+    </div>
+    <!-- 2.引入 footer -->
+    <%- include("./layout/footer"); -%>
+
+    <!-- 3. link 必須的 javaScript檔案  -->
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="/assets/js/tools.js"></script>
+  </body>
+</html>

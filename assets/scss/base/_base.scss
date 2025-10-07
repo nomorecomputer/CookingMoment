@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+.Body {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.Body2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// 用於griding 可抵銷左、右col多出的left padding
+.container-with-padding {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media (min-width: 768px) {
+  .Body-md {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .Body2-md {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  $headingRank: (
+    1: 64px,
+    2: 40px,
+    3: 28px,
+    4: 24px,
+    5: 20px,
+    6: 16px,
+  );
+  @each $rank, $size in $headingRank {
+    .h-md-#{$rank} {
+      font-size: $size;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+}
+
+@mixin text-multiline-truncate($font-size, $line-height, $max-line-Number) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  $maxHeight: $font-size * $line-height * $max-line-Number;
+  max-height: $maxHeight;
+
+  // 僅支援 支援webkit的browser 如：chrome、Safari
+  display: -webkit-box; /* 使用弹性盒子模型 */
+  -webkit-box-orient: vertical; /* 设置盒子方向为垂直 */
+  -webkit-line-clamp: $max-line-Number;
+}

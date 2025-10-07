@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/CookingMoment/favicon.ico" />
     <title>Document</title>
-    <script type="module" crossorigin src="/CookingMoment/assets/main-t0yGaiA6.js"></script>
-    <link rel="stylesheet" crossorigin href="/CookingMoment/assets/main-DPJpvPkN.css">
+    <script type="module" crossorigin src="/CookingMoment/assets/main-qRsYEajO.js"></script>
+    <link rel="stylesheet" crossorigin href="/CookingMoment/assets/main-DI6mDrkm.css">
   </head>
   <body>
     <!-- header -->
@@ -216,50 +217,62 @@
       <!-- recip 2 -->
       <div class="container-with-padding my-18 my-md-30 mx-auto" id="product_list">
   <!-- 類別食譜 上方 類別清單 -->
-  <div
+  <div class="container overflow-hidden bg-white mb-13">
+    <div
+      class="container-with-padding d-flex flex-row bg-white justify-content-between"
+      id="category-slider"
+    ></div>
+  </div>
+  <!-- <div
     class="container-with-padding d-flex flex-row overflow-hidden bg-white mb-12 mb-md-26 justify-content-between"
     id="category-menu"
   >
     <img
-      src="/CookingMoment/assets/category1_meat-BCkwmhSt.png"
+      src="/images/index/category1_meat.png"
       class="category-item"
       data-category="meat"
       alt="meat.png"
     />
     <img
-      src="/CookingMoment/assets/category2_seafood-D0amWPf9.png"
+      src="/images/index/category2_seafood.png"
       class="category-item"
       data-category="seafood"
       alt="seafood.png"
     />
     <img
-      src="/CookingMoment/assets/category3_vegetable-DiiA8P6O.png"
+      src="/images/index/category3_vegetable.png"
       class="category-item selected"
       data-category="vegetable"
       alt="vegetable.png"
     />
     <img
-      src="/CookingMoment/assets/category4_vegetarian-DahVusJx.png"
+      src="/images/index/category4_vegetarian.png"
       class="category-item"
       data-category="vegetarian"
       alt="vegetarian.png"
     />
     <img
-      src="/CookingMoment/assets/category5_Ketogenic-DnL2tgLh.png"
+      src="/images/index/category5_Ketogenic.png"
       class="category-item"
       data-category="ketogenic"
       alt="Ketogenic.png"
     />
     <img
-      src="/CookingMoment/assets/category6_all-CY81yjoM.png"
+      src="/images/index/category6_all.png"
       class="category-item"
       data-category="all"
       alt=""
     />
-  </div>
-  <div class="icon-ellipsis ellipsis mb-12 m-auto" id="category-ellipsis">
+  </div> -->
+
+  <div
+    id="category-indicator-container"
+    class="d-flex flex-row mb-12 m-auto justify-content-center mb-15 mb-md-20"
+  ></div>
+
+  <!-- <div class="icon-ellipsis ellipsis mb-12 m-auto" id="category-ellipsis">
     ...
-  </div>
+  </div> -->
   <!-- 類別食譜 下方 卡片區  -->
   <div
     class="container-with-padding d-flex flex-row overflow-hidden mb-14 mb-md-22"

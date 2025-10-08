@@ -72,7 +72,7 @@
     border-top-right-radius: 10px;
     cursor: grab;
     &:active {
-      cursor: grabbing;
+      cursor: grabbing !important;
     }
   }
   .img_normal {

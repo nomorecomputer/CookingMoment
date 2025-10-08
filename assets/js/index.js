@@ -25,6 +25,7 @@ const Banner_Names = {
   Btn_right_l: "banner_right_l",
 };
 const Banner_Images = ["banner1_large.jpg", "about_bg.jpg", "banner2.jpg"];
+const Banner_Titles = ["本周主打食譜", "蔬果入菜有益健康", "生酮飲食好處多"];
 let BannerImageIndex = 0;
 
 const SwipeContainerIds = [];
@@ -299,8 +300,12 @@ function handle_banner_rotate(direction) {
     (BannerImageIndex + Banner_Images.length) % Banner_Images.length;
   const imageName = Banner_Images[BannerImageIndex];
   const bannerElem = document.getElementById(Banner_Names.BannerId);
+  const titleElem = document.querySelectorAll(".banner_title");
+  titleElem.forEach(
+    (elem) => (elem.innerText = Banner_Titles[BannerImageIndex])
+  );
 
-  const imagePath = `url(/CookingMoment/images/index/${imageName})`;
+  const imagePath = `url("/CookingMoment/images/index/${imageName}")`;
 
   bannerElem.style.backgroundImage = imagePath;
 }

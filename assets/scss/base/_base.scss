@@ -24,8 +24,8 @@
 .container-with-padding {
   max-width: 1320px;
   margin: 0 auto;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: -12px;
+  padding-right: -12px;
 }
 
 @media (min-width: 768px) {

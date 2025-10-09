@@ -28,6 +28,18 @@
   padding-right: -12px;
 }
 
+button {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+button:focus,
+button:active,
+button:visited {
+  outline: none;
+  box-shadow: none;
+}
+
 @media (min-width: 768px) {
   .Body-md {
     font-size: 24px;
